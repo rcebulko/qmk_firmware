@@ -4,8 +4,8 @@
   "notes": "",
   "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "maple_computing/minidox/rev1",
-  "keymap": "minidox_layout_split_3x5_mine",
   "layout": "LAYOUT_split_3x5_3",
+  "keymap": "minidox_layout",
   "layers": [
     [
       "LT(8,KC_QUOT)",
@@ -25,7 +25,7 @@
       "KC_I",
       "KC_D",
       "LT(2,KC_H)",
-      "RALT_T(KC_T)",
+      "LALT_T(KC_T)",
       "RSFT_T(KC_N)",
       "RCTL_T(KC_S)",
       "MEH_T(KC_SCLN)",
@@ -38,12 +38,12 @@
       "LCA_T(KC_W)",
       "C_S_T(KC_V)",
       "MEH_T(KC_Z)",
+      "LT(4,KC_DEL)",
       "KC_SPC",
       "KC_BSPC",
-      "MO(4)",
-      "MO(5)",
       "LT(1,KC_ENT)",
-      "KC_SPC"
+      "KC_SPC",
+      "LT(5,KC_TAB)"
     ],
     [
       "KC_TRNS",
@@ -76,12 +76,12 @@
       "KC_2",
       "KC_3",
       "KC_PDOT",
+      "KC_ESC",
       "KC_TAB",
       "KC_DEL",
-      "KC_ESC",
-      "TG(1)",
       "KC_TRNS",
-      "KC_P0"
+      "KC_P0",
+      "TG(1)"
     ],
     [
       "KC_EXLM",
@@ -114,12 +114,12 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
+      "KC_ESC",
       "KC_TAB",
       "KC_DEL",
-      "KC_ESC",
       "KC_TRNS",
-      "TG(1)",
-      "KC_P0"
+      "KC_P0",
+      "TG(1)"
     ],
     [
       "KC_TRNS",
@@ -193,9 +193,9 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
       "RSFT(KC_PSCR)",
-      "RCS(KC_PSCR)"
+      "RCS(KC_PSCR)",
+      "KC_TRNS"
     ],
     [
       "LGUI(KC_SPC)",
@@ -231,9 +231,9 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
+      "RCS(KC_PSCR)",
       "RSFT(KC_PSCR)",
-      "RCS(KC_PSCR)"
+      "KC_TRNS"
     ],
     [
       "KC_TRNS",

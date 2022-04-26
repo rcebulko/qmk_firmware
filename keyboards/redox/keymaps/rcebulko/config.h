@@ -34,7 +34,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLIGHT_VAL_STEP 8
 
 #define IGNORE_MOD_TAP_INTERRUPT
-// #define PERMISSIVE_HOLD
+// #define HOLD_ON_OTHER_KEY_PRESS if PERMISSIVE_HOLD isn't enough
+// PERMISSIVE_HOLD: MOD(down), K(down), K(up), MOD(up), TT => hold
+// HOLD_ON_OTHER_KEY_PRESS: MOD(down), K(down), MOD(up), K(up) TT => hold
+#define PERMISSIVE_HOLD
+#define TAPPING_TERM 100
 
 // #define TAPPING_TOGGLE 2
 

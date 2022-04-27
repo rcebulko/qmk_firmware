@@ -38,12 +38,12 @@
       "LCA_T(KC_W)",
       "C_S_T(KC_V)",
       "MEH_T(KC_Z)",
-      "KC_BSPC",
-      "KC_SPC",
       "LT(4,KC_DEL)",
-      "LT(5,KC_TAB)",
       "KC_SPC",
-      "LT(1,KC_ENT)"
+      "KC_BSPC",
+      "LT(1,KC_ENT)",
+      "KC_SPC",
+      "LT(5,KC_TAB)"
     ],
     [
       "KC_TRNS",
@@ -76,12 +76,12 @@
       "KC_2",
       "KC_3",
       "KC_PDOT",
-      "KC_DEL",
-      "KC_TAB",
       "KC_ESC",
-      "TG(1)",
+      "KC_TAB",
+      "KC_DEL",
+      "KC_TRNS",
       "KC_P0",
-      "KC_TRNS"
+      "TG(1)"
     ],
     [
       "KC_EXLM",
@@ -114,12 +114,12 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_DEL",
-      "KC_TAB",
       "KC_ESC",
-      "TG(1)",
+      "KC_TAB",
+      "KC_DEL",
+      "KC_TRNS",
       "KC_P0",
-      "KC_TRNS"
+      "TG(1)"
     ],
     [
       "KC_TRNS",
@@ -193,9 +193,9 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
+      "RSFT(KC_PSCR)",
       "RCS(KC_PSCR)",
-      "RSFT(KC_PSCR)"
+      "KC_TRNS"
     ],
     [
       "LGUI(KC_SPC)",
@@ -231,9 +231,9 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
+      "RCS(KC_PSCR)",
       "RSFT(KC_PSCR)",
-      "RCS(KC_PSCR)"
+      "KC_TRNS"
     ],
     [
       "KC_TRNS",

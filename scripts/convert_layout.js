@@ -55,7 +55,7 @@ applyLayoutTransform(
       symmetricSlice(top, 1, 5),
       symmetricSlice(middle, 1, 5),
       symmetricSlice(bottom, 1, 5),
-      [lt1, lt0, lt2, rt2, rt0, rt1],
+      [lt2, lt0, lt1, rt1, rt0, rt2],
     ].flat();
   }
 );

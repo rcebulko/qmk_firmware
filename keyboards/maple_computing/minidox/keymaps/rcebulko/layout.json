@@ -53,9 +53,9 @@
       "KC_SLSH",
       "KC_7",
       "KC_8",
-      "KC_P9",
+      "KC_9",
       "KC_MINS",
-      "KC_TRNS",
+      "KC_O",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
@@ -78,8 +78,8 @@
       "KC_ESC",
       "KC_TAB",
       "KC_DEL",
-      "KC_TRNS",
-      "KC_P0",
+      "KC_LGUI",
+      "KC_0",
       "KC_NUM"
     ],
     [

@@ -24,7 +24,11 @@ combo_t key_combos[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        MS_BTN1,    DPI_CONFIG,    DRAG_SCROLL,    MS_BTN2, 
-        MS_BTN1,                                   MS_BTN3
+        MO(1),    MS_BTN3,    MS_BTN2,    DRAG_SCROLL,
+        MS_BTN1,                          DPI_CONFIG
+    ),
+    [1] = LAYOUT(
+        _______,    LCTL(W),    LCS(T),    _______,
+        _______,                            _______
     )
 };

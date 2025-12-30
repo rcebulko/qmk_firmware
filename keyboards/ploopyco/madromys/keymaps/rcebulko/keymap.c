@@ -17,13 +17,14 @@
  */
 #include QMK_KEYBOARD_H
 
+const uint16_t PROGMEM top_outer_btns[] = {MS_BTN1, MS_BTN3, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(top_outer_btns, QK_REBOOT)
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        /*Top-left*/     MS_BTN1,
-        /*Middle-left*/  DPI_CONFIG,
-        /*Middle-right*/ MS_BTN3,
-        /*Top-right?*/   MS_BTN2, 
-        /*Bottom-left?*/ MS_BTN1,
-        /*Bottom-right*/ DRAG_SCROLL
+        MS_BTN1,    DPI_CONFIG,    DRAG_SCROLL,    MS_BTN2, 
+        MS_BTN1,                                   MS_BTN3
     )
 };

@@ -21,6 +21,10 @@ const uint16_t PROGMEM top_outer_btns[] = {MS_BTN1, MS_BTN3, COMBO_END};
 combo_t key_combos[] = {
     COMBO(top_outer_btns, QK_REBOOT)
 };
+enum custom_keycodes {
+    ALT_TAB = SAFE_RANGE,
+    ALT_SHIFT_TAB
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
@@ -28,7 +32,45 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MS_BTN1,                          DPI_CONFIG
     ),
     [1] = LAYOUT(
-        _______,    LCTL(W),    LCS(T),    _______,
-        _______,                            _______
+        _______,    LCTL(KC_W),    LCS(KC_T),    ALT_TAB,
+        ALT_SHIFT_TAB,                            _______
     )
 };
+
+bool is_alt_tab_active = false;
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    if (is_alt_tab_active) {
+        unregister_code(KC_LALT);
+        is_alt_tab_active = false;
+    }
+
+    return state;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t* record) {
+    switch (keycode) {
+        case ALT_TAB:
+            if (record->event.pressed) {
+                if (!is_alt_tab_active) {
+                    is_alt_tab_active = true;
+                    register_code(KC_LALT);
+                }
+                tap_code16(KC_TAB);
+            }
+            break;
+        case ALT_SHIFT_TAB:
+            if (record->event.pressed) {
+                if (!is_alt_tab_active) {
+                    is_alt_tab_active = true;
+                    register_code(KC_LALT);
+                }
+                tap_code16(LSFT(KC_TAB));
+            }
+            break;
+        
+        return false;
+    }
+    
+    return true;
+}

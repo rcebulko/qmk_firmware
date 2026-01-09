@@ -28,8 +28,8 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        MO(1),    MS_BTN3,    MS_BTN2,    DRAG_SCROLL,
-        MS_BTN1,                          DPI_CONFIG
+        MO(1),    DPI_CONFIG,    DRAG_SCROLL,    MS_BTN2,
+        MS_BTN1,                                 MS_BTN3
     ),
     [1] = LAYOUT(
         _______,    LCTL(KC_W),    LCS(KC_T),    ALT_TAB,

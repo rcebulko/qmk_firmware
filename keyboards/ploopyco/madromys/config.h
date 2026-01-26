@@ -21,8 +21,7 @@
 #define UNUSABLE_PINS \
     { GP1, GP3, GP4, GP6, GP8, GP10, GP14, GP16, GP18, GP20, GP22, GP24, GP25, GP26, GP27, GP28, GP29 }
 
-//#define ROTATIONAL_TRANSFORM_ANGLE 45
-#define POINTING_DEVICE_INVERT_Y
+// #define ROTATIONAL_TRANSFORM_ANGLE 0
 
 /* PMW3360 Settings */
 #define PMW33XX_LIFTOFF_DISTANCE 0x00
@@ -32,7 +31,17 @@
 #define SPI_MOSI_PIN GP7
 
 /* My customizations */
-#define PLOOPY_DRAGSCROLL_INVERT
-#define PLOOPY_DRAGSCROLL_MOMENTARY
+// #define PLOOPY_DRAGSCROLL_MOMENTARY
 #define PLOOPY_DPI_OPTIONS { 300, 600, 900 }
 #define PLOOPY_DPI_DEFAULT 1
+
+// Set drag scroll divisor to higher number so it isn't so fast
+#define PLOOPY_DRAGSCROLL_DIVISOR_H 24.0
+// Set how many 'frames' MacOS dragscroll should skip, reduces scroll speed
+#define PLOOPY_DRAGSCROLL_DELAY 12
+
+// Upside-down (rotation only supports +/- 127 degrees)
+// Invert X, DON'T invert Y.
+// #define POINTING_DEVICE_INVERT_Y
+#define POINTING_DEVICE_INVERT_X
+#define PLOOPY_DRAGSCROLL_INVERT

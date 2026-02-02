@@ -17,9 +17,9 @@
  */
 #include QMK_KEYBOARD_H
 
-const uint16_t PROGMEM top_outer_btns[] = {MS_BTN1, MS_BTN3, COMBO_END};
+// const uint16_t PROGMEM top_outer_btns[] = {MS_BTN1, LT(1, MS_BTN3), COMBO_END};
 combo_t key_combos[] = {
-    COMBO(top_outer_btns, QK_REBOOT)
+    // COMBO(top_outer_btns, QK_REBOOT)
 };
 enum custom_keycodes {
     ALT_TAB = SAFE_RANGE,
@@ -28,16 +28,20 @@ enum custom_keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
-        MO(1),      DPI_CONFIG,   DRAG_SCROLL, MS_BTN1,
-        MS_BTN2,                               LT(2, MS_BTN3)
+        LT(1, MS_BTN3), MO(2),         DRAG_SCROLL,  MS_BTN1,
+        MS_BTN2,                                     MO(3)
     ),
     [1] = LAYOUT(
-        _______,    LCTL(KC_TAB), LCS(KC_TAB), ALT_SHIFT_TAB,
-        ALT_TAB,                               _______
+        _______,        LCTL(KC_TAB),  LCS(KC_TAB),  LCTL(KC_W),
+        LCS(KC_T),                                   _______
     ),
     [2] = LAYOUT(
-        LCTL(KC_X),    LCS(KC_T),   LCTL(KC_W),   LCTL(KC_V),
-        LCTL(KC_C),                         _______
+        ALT_SHIFT_TAB,  _______,       DPI_CONFIG,   _______,
+        ALT_TAB,                                     QK_REBOOT
+    ),
+    [3] = LAYOUT(
+        LCTL(KC_Z),     LCTL(KC_Y),    LCTL(KC_X),   LCTL(KC_V),
+        LCTL(KC_C),                                  _______
     )
 };
 
